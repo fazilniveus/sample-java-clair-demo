@@ -28,6 +28,7 @@ pipeline {
 			    script {
 				    // myimage = docker.build("fazilniveus/devops:${env.BUILD_ID}")
 				    	docker build --tag=docker-java-hello-world-app .
+						}
 			    }
 		    }
 	    }
