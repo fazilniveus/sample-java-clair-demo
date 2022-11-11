@@ -26,7 +26,7 @@ pipeline {
 		    steps {
 			    sh 'whoami'
 			    sh '''
-				    	docker build --tag=docker-java-hello-world-app .
+				    	docker build --tag=docker-java-hello-world-app -f Dockerfile.
 			    '''		
 			    
 		    }
