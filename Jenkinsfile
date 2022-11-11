@@ -25,11 +25,11 @@ pipeline {
 	    stage('Build Docker Image') {
 		    steps {
 			    sh 'whoami'
-			    script {
+			    sh '''
 				    // myimage = docker.build("fazilniveus/devops:${env.BUILD_ID}")
 				    	docker build --tag=docker-java-hello-world-app .
-						}
-			    }
+			    '''		
+			    
 		    }
 	    }
 	    stage("Clair_scan"){
